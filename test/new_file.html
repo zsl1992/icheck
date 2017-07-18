@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="blue.css"/>
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<input type="checkbox" id="yongshui">
+		<input type="radio" name="iCheck">
+
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script src="icheck.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_square-blue', // 注意square和blue的对应关系
+					radioClass: 'iradio_square-blue',
+					increaseArea: '20%' // optional
+				});
+
+
+				$('#yongshui').on('ifChecked', function(event) {
+					console.log('点了');
+				})
+				$('#yongshui').on('ifUnchecked', function(event) {
+					console.log('没点');
+				})
+			})
+						
+		</script>
+	</body>
+
+</html>
